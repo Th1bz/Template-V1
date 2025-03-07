@@ -121,7 +121,7 @@ document.addEventListener("DOMContentLoaded", () => {
   /**
    * Filtres du portfolio
    */
-  const initPortfolioFilters = () => {
+  const initProjectFilters = () => {
     on(
       "click",
       ".filter-btn",
@@ -134,9 +134,9 @@ document.addEventListener("DOMContentLoaded", () => {
         this.classList.add("active");
 
         const filterValue = this.getAttribute("data-filter");
-        const portfolioItems = select(".portfolio-item", true);
+        const projectItems = select(".project-item", true);
 
-        portfolioItems.forEach((item) => {
+        projectItems.forEach((item) => {
           if (
             filterValue === "all" ||
             item.getAttribute("data-category") === filterValue
@@ -149,60 +149,6 @@ document.addEventListener("DOMContentLoaded", () => {
       },
       true
     );
-  };
-
-  /**
-   * Slider de témoignages
-   */
-  const initTestimonialsSlider = () => {
-    const testimonialItems = select(".testimonial-item", true);
-    const prevBtn = select(".prev-btn");
-    const nextBtn = select(".next-btn");
-    let currentIndex = 0;
-
-    // Cacher tous les témoignages sauf le premier
-    testimonialItems.forEach((item, index) => {
-      if (index !== 0) {
-        item.style.display = "none";
-      }
-    });
-
-    // Fonction pour afficher un témoignage spécifique
-    const showTestimonial = (index) => {
-      testimonialItems.forEach((item) => {
-        item.style.display = "none";
-      });
-      testimonialItems[index].style.display = "block";
-    };
-
-    // Événement pour le bouton précédent
-    if (prevBtn) {
-      prevBtn.addEventListener("click", () => {
-        currentIndex--;
-        if (currentIndex < 0) {
-          currentIndex = testimonialItems.length - 1;
-        }
-        showTestimonial(currentIndex);
-      });
-    }
-
-    // Événement pour le bouton suivant
-    if (nextBtn) {
-      nextBtn.addEventListener("click", () => {
-        currentIndex++;
-        if (currentIndex >= testimonialItems.length) {
-          currentIndex = 0;
-        }
-        showTestimonial(currentIndex);
-      });
-    }
-
-    // Défilement automatique
-    setInterval(() => {
-      if (nextBtn) {
-        nextBtn.click();
-      }
-    }, 5000);
   };
 
   /**
@@ -245,91 +191,6 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   /**
-   * Validation du formulaire de contact
-   */
-  const initContactForm = () => {
-    const contactForm = select("#contactForm");
-    if (contactForm) {
-      contactForm.addEventListener("submit", function (e) {
-        e.preventDefault();
-
-        // Simulation d'envoi de formulaire
-        const submitBtn = this.querySelector('button[type="submit"]');
-        const originalText = submitBtn.textContent;
-
-        submitBtn.disabled = true;
-        submitBtn.textContent = "Envoi en cours...";
-
-        // Simuler un délai d'envoi
-        setTimeout(() => {
-          // Réinitialiser le formulaire
-          contactForm.reset();
-
-          // Afficher un message de succès
-          const successMessage = document.createElement("div");
-          successMessage.className = "alert alert-success";
-          successMessage.textContent =
-            "Votre message a été envoyé avec succès!";
-
-          contactForm.parentNode.insertBefore(successMessage, contactForm);
-
-          // Réinitialiser le bouton
-          submitBtn.disabled = false;
-          submitBtn.textContent = originalText;
-
-          // Supprimer le message après 5 secondes
-          setTimeout(() => {
-            successMessage.remove();
-          }, 5000);
-        }, 2000);
-      });
-    }
-  };
-
-  /**
-   * Validation du formulaire de newsletter
-   */
-  const initNewsletterForm = () => {
-    const newsletterForm = select("#newsletterForm");
-    if (newsletterForm) {
-      newsletterForm.addEventListener("submit", function (e) {
-        e.preventDefault();
-
-        // Simulation d'abonnement
-        const emailInput = this.querySelector('input[type="email"]');
-        const submitBtn = this.querySelector('button[type="submit"]');
-
-        submitBtn.disabled = true;
-
-        // Simuler un délai d'envoi
-        setTimeout(() => {
-          // Réinitialiser le formulaire
-          newsletterForm.reset();
-
-          // Afficher un message de succès
-          const successMessage = document.createElement("div");
-          successMessage.className = "newsletter-success";
-          successMessage.textContent =
-            "Vous êtes maintenant abonné à notre newsletter!";
-
-          newsletterForm.parentNode.insertBefore(
-            successMessage,
-            newsletterForm.nextSibling
-          );
-
-          // Réinitialiser le bouton
-          submitBtn.disabled = false;
-
-          // Supprimer le message après 5 secondes
-          setTimeout(() => {
-            successMessage.remove();
-          }, 5000);
-        }, 1500);
-      });
-    }
-  };
-
-  /**
    * Préchargeur
    */
   const initPreloader = () => {
@@ -347,11 +208,8 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("load", () => {
     toggleMobileMenu();
     headerScrolled();
-    initPortfolioFilters();
-    initTestimonialsSlider();
+    initProjectFilters();
     initSmoothScroll();
-    initContactForm();
-    initNewsletterForm();
     initPreloader();
     initAOS();
   });
