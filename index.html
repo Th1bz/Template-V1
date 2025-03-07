@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Template de site vitrine moderne et responsive"
+    />
+    <title>Template Site Vitrine</title>
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- Font Awesome (pour les icônes) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- En-tête -->
+    <header id="header">
+      <div class="container">
+        <div class="logo">
+          <a href="#"
+            ><img src="assets/images/logo.png" alt="Logo" id="logo-img"
+          /></a>
+          <h1>Nom de l'Entreprise</h1>
+        </div>
+        <nav>
+          <ul class="nav-menu">
+            <li><a href="#hero" class="active">Accueil</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">À propos</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#testimonials">Témoignages</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Section Hero -->
+    <section id="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h2>Bienvenue sur notre site</h2>
+          <p>Une solution complète pour votre entreprise</p>
+          <div class="cta-buttons">
+            <a href="#contact" class="btn btn-primary">Nous contacter</a>
+            <a href="#services" class="btn btn-secondary">Nos services</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Services -->
+    <section id="services">
+      <div class="container">
+        <div class="section-header">
+          <h2>Nos Services</h2>
+          <p>Découvrez ce que nous pouvons faire pour vous</p>
+        </div>
+        <div class="services-grid">
+          <div class="service-card">
+            <i class="fas fa-laptop-code"></i>
+            <h3>Développement Web</h3>
+            <p>
+              Création de sites web modernes et responsives adaptés à vos
+              besoins.
+            </p>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-mobile-alt"></i>
+            <h3>Applications Mobiles</h3>
+            <p>Développement d'applications mobiles natives et hybrides.</p>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-search"></i>
+            <h3>Référencement SEO</h3>
+            <p>
+              Optimisation pour les moteurs de recherche pour améliorer votre
+              visibilité.
+            </p>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-paint-brush"></i>
+            <h3>Design Graphique</h3>
+            <p>Création d'identités visuelles et supports de communication.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section À propos -->
+    <section id="about">
+      <div class="container">
+        <div class="section-header">
+          <h2>À Propos de Nous</h2>
+          <p>Apprenez à nous connaître</p>
+        </div>
+        <div class="about-content">
+          <div class="about-image">
+            <img src="assets/images/about.jpg" alt="À propos de nous" />
+          </div>
+          <div class="about-text">
+            <h3>Notre Histoire</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in
+              dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed
+              auctor neque eu tellus rhoncus ut eleifend nibh porttitor.
+            </p>
+            <p>
+              Ut in nulla enim. Phasellus molestie magna non est bibendum non
+              venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus.
+              Mauris iaculis porttitor posuere.
+            </p>
+            <div class="about-stats">
+              <div class="stat">
+                <span class="stat-number">10+</span>
+                <span class="stat-text">Années d'expérience</span>
+              </div>
+              <div class="stat">
+                <span class="stat-number">250+</span>
+                <span class="stat-text">Projets réalisés</span>
+              </div>
+              <div class="stat">
+                <span class="stat-number">100%</span>
+                <span class="stat-text">Clients satisfaits</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Portfolio -->
+    <section id="portfolio">
+      <div class="container">
+        <div class="section-header">
+          <h2>Notre Portfolio</h2>
+          <p>Découvrez nos réalisations récentes</p>
+        </div>
+        <div class="portfolio-filter">
+          <button class="filter-btn active" data-filter="all">Tous</button>
+          <button class="filter-btn" data-filter="web">Web</button>
+          <button class="filter-btn" data-filter="app">Applications</button>
+          <button class="filter-btn" data-filter="design">Design</button>
+        </div>
+        <div class="portfolio-grid">
+          <div class="portfolio-item" data-category="web">
+            <img src="assets/images/portfolio-1.jpg" alt="Projet 1" />
+            <div class="portfolio-info">
+              <h3>Projet Web 1</h3>
+              <p>Site e-commerce</p>
+              <a href="#" class="portfolio-link"><i class="fas fa-link"></i></a>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="app">
+            <img src="assets/images/portfolio-2.jpg" alt="Projet 2" />
+            <div class="portfolio-info">
+              <h3>Projet App 1</h3>
+              <p>Application mobile</p>
+              <a href="#" class="portfolio-link"><i class="fas fa-link"></i></a>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="design">
+            <img src="assets/images/portfolio-3.jpg" alt="Projet 3" />
+            <div class="portfolio-info">
+              <h3>Projet Design 1</h3>
+              <p>Identité visuelle</p>
+              <a href="#" class="portfolio-link"><i class="fas fa-link"></i></a>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="web">
+            <img src="assets/images/portfolio-4.jpg" alt="Projet 4" />
+            <div class="portfolio-info">
+              <h3>Projet Web 2</h3>
+              <p>Site vitrine</p>
+              <a href="#" class="portfolio-link"><i class="fas fa-link"></i></a>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="app">
+            <img src="assets/images/portfolio-5.jpg" alt="Projet 5" />
+            <div class="portfolio-info">
+              <h3>Projet App 2</h3>
+              <p>Application web</p>
+              <a href="#" class="portfolio-link"><i class="fas fa-link"></i></a>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="design">
+            <img src="assets/images/portfolio-6.jpg" alt="Projet 6" />
+            <div class="portfolio-info">
+              <h3>Projet Design 2</h3>
+              <p>Branding</p>
+              <a href="#" class="portfolio-link"><i class="fas fa-link"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Témoignages -->
+    <section id="testimonials">
+      <div class="container">
+        <div class="section-header">
+          <h2>Témoignages Clients</h2>
+          <p>Ce que nos clients disent de nous</p>
+        </div>
+        <div class="testimonials-slider">
+          <div class="testimonial-item">
+            <div class="testimonial-content">
+              <p>
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+                in dui mauris. Vivamus hendrerit arcu sed erat molestie
+                vehicula."
+              </p>
+              <div class="testimonial-author">
+                <img src="assets/images/client-1.jpg" alt="Client 1" />
+                <div class="author-info">
+                  <h4>Jean Dupont</h4>
+                  <p>PDG, Entreprise ABC</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-item">
+            <div class="testimonial-content">
+              <p>
+                "Ut in nulla enim. Phasellus molestie magna non est bibendum non
+                venenatis nisl tempor. Suspendisse dictum feugiat nisl ut
+                dapibus."
+              </p>
+              <div class="testimonial-author">
+                <img src="assets/images/client-2.jpg" alt="Client 2" />
+                <div class="author-info">
+                  <h4>Marie Martin</h4>
+                  <p>Directrice Marketing, XYZ Inc.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-item">
+            <div class="testimonial-content">
+              <p>
+                "Mauris iaculis porttitor posuere. Praesent id metus massa, ut
+                blandit odio. Proin quis tortor orci. Etiam at risus et justo
+                dignissim congue."
+              </p>
+              <div class="testimonial-author">
+                <img src="assets/images/client-3.jpg" alt="Client 3" />
+                <div class="author-info">
+                  <h4>Pierre Durand</h4>
+                  <p>Fondateur, Startup DEF</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-controls">
+          <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
+          <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section id="contact">
+      <div class="container">
+        <div class="section-header">
+          <h2>Contactez-Nous</h2>
+          <p>Nous sommes à votre écoute</p>
+        </div>
+        <div class="contact-content">
+          <div class="contact-info">
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <h3>Notre Adresse</h3>
+                <p>123 Rue Exemple, 75000 Paris, France</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <h3>Email</h3>
+                <p>contact@exemple.com</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-phone-alt"></i>
+              <div>
+                <h3>Téléphone</h3>
+                <p>+33 1 23 45 67 89</p>
+              </div>
+            </div>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+          <div class="contact-form">
+            <form id="contactForm">
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Votre Nom"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Votre Email"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  placeholder="Sujet"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="Votre Message"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Envoyer</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pied de page -->
+    <footer id="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <img src="assets/images/logo.png" alt="Logo" />
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in
+              dui mauris.
+            </p>
+          </div>
+          <div class="footer-links">
+            <h3>Liens Rapides</h3>
+            <ul>
+              <li><a href="#hero">Accueil</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#about">À propos</a></li>
+              <li><a href="#portfolio">Portfolio</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-newsletter">
+            <h3>Newsletter</h3>
+            <p>Abonnez-vous pour recevoir nos dernières actualités</p>
+            <form id="newsletterForm">
+              <input type="email" placeholder="Votre email" required />
+              <button type="submit"><i class="fas fa-paper-plane"></i></button>
+            </form>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2023 Template Site Vitrine. Tous droits réservés.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bouton retour en haut -->
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+    <!-- JavaScript -->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

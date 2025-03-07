@@ -1,0 +1,12 @@
+ # Fichiers système
+.DS_Store
+Thumbs.db
+
+# Fichiers de configuration
+.env
+
+# Fichiers de données
+data/
+
+# Dépendances et build
+node_modules/
